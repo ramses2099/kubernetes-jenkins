@@ -14,6 +14,7 @@ kubectl apply -f jenkins.serviceAccount.yaml
 # step 3 - run manifest jenkins.volume.yml
 ```
 kubectl get nodes
+--mportant Note: Replace 'worker-node01' with any one of your cluster worker nodes hostname.
 
 kubectl create -f jenkins.volume.yaml
 ```
