@@ -14,4 +14,6 @@ kubectl apply -f jenkins.serviceAccount.yaml
 # step 3 - run manifest jenkins.volume.yml
 ```
 kubectl get nodes
+
+kubectl create -f jenkins.volume.yaml
 ```
