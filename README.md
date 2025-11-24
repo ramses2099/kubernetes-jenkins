@@ -41,3 +41,7 @@ kubectl describe deployments --namespace=devops-tools
 ```
 kubectl apply -f jenkins.service.yml
 ```
+# step 6 - port service publish 32500
+```
+http://<node-ip>:32500
+```
