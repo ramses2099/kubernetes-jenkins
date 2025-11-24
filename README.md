@@ -17,3 +17,26 @@ kubectl get nodes
 
 kubectl create -f jenkins.volume.yaml
 ```
+# step 4 - run manifest jenkins.deployment.yml
+```
+runAsUser=1000
+fsGroup=1000   # Or custom ID, per above
+mkdir -p /var/jenkins_home
+chown -R $runAsUser:$fsGroup /var/jenkins_home
+chmod -R g+rwX /var/jenkins_home
+```
+```
+kubectl apply -f jenkins.deployment.yml
+```
+# check the deployment status
+```
+kubectl get deployments -n devops-tools
+```
+# for more details
+```
+kubectl describe deployments --namespace=devops-tools
+```
+# step 5 - run manifest jenkins.service.yml
+```
+kubectl apply -f jenkins.service.yml
+```
