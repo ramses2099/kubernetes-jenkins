@@ -45,3 +45,12 @@ kubectl apply -f jenkins.service.yml
 ```
 http://<node-ip>:32500
 ```
+# step 7 - get the master password of jenkins
+```
+kubectl get pods --namespace=devops-tools
+```
+
+# step 8 - the password in the log of the pod
+```
+kubectl logs jenkins-f5b474494-87vvb --namespace=devops-tools
+```
